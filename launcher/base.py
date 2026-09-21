@@ -1,0 +1,9 @@
+from typing import Protocol
+
+
+class Launcher(Protocol):
+    def resolve_app(self, candidates: list[str]) -> str | None: ...
+
+    def open_desktop(self, app_id: str, task: str) -> None: ...
+
+    def open_web(self, url: str, site_key: str, task: str) -> None: ...
